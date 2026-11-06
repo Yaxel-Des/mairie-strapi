@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demarches",
+  "info": {
+    "singularName": "demarche",
+    "pluralName": "demarches",
+    "displayName": "Demarche"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titre": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Pieces": {
+      "type": "string"
+    },
+    "Delai": {
+      "type": "string"
+    },
+    "Cout": {
+      "type": "string"
+    },
+    "Pdf": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

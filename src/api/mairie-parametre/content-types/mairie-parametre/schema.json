@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "mairie_parametres",
+  "info": {
+    "singularName": "mairie-parametre",
+    "pluralName": "mairie-parametres",
+    "displayName": "MairieParametres"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Presentation": {
+      "type": "richtext"
+    },
+    "Histoire": {
+      "type": "richtext"
+    },
+    "ConseilMunicipal": {
+      "type": "blocks"
+    },
+    "Organigramme": {
+      "type": "richtext"
+    },
+    "HorairesOuverture": {
+      "type": "string"
+    },
+    "Adresse": {
+      "type": "string"
+    },
+    "Telephone": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    }
+  }
+}

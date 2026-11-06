@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_parametres",
+  "info": {
+    "singularName": "contact-parametre",
+    "pluralName": "contact-parametres",
+    "displayName": "Paramètres de contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Facebook": {
+      "type": "string"
+    },
+    "Whatsapp": {
+      "type": "string"
+    },
+    "TwitterX": {
+      "type": "string"
+    },
+    "Youtube": {
+      "type": "string"
+    }
+  }
+}

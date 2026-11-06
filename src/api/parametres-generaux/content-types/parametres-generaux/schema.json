@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "parametres_generauxes",
+  "info": {
+    "singularName": "parametres-generaux",
+    "pluralName": "parametres-generauxes",
+    "displayName": "ParametresGeneraux"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Facebook": {
+      "type": "string"
+    }
+  }
+}
