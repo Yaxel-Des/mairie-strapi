@@ -17,9 +17,6 @@
     "Description": {
       "type": "text"
     },
-    "Pieces": {
-      "type": "string"
-    },
     "Delai": {
       "type": "string"
     },
@@ -35,6 +32,12 @@
         "videos",
         "audios"
       ]
+    },
+    "Pieces": {
+      "type": "blocks"
+    },
+    "Lieu": {
+      "type": "string"
     }
   }
 }

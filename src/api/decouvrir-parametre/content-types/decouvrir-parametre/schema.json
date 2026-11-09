@@ -4,7 +4,7 @@
   "info": {
     "singularName": "decouvrir-parametre",
     "pluralName": "decouvrir-parametres",
-    "displayName": "DecouvrirParametres"
+    "displayName": "DecouvrirParametre"
   },
   "options": {
     "draftAndPublish": true

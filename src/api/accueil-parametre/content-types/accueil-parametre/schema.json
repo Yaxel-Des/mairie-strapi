@@ -4,7 +4,7 @@
   "info": {
     "singularName": "accueil-parametre",
     "pluralName": "accueil-parametres",
-    "displayName": "AccueilParametres"
+    "displayName": "AccueilParametre"
   },
   "options": {
     "draftAndPublish": true

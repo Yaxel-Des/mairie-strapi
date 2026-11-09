@@ -1,0 +1,21 @@
+{
+  "collectionName": "rojets_parametres",
+  "info": {
+    "singularName": "rojets-parametre",
+    "pluralName": "rojets-parametres",
+    "displayName": "ProjetsParametres"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Introduction": {
+      "type": "richtext"
+    },
+    "TexteInvestir": {
+      "type": "richtext"
+    }
+  },
+  "kind": "singleType"
+}

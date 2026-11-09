@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_legales",
+  "info": {
+    "singularName": "page-legale",
+    "pluralName": "page-legales",
+    "displayName": "PageLegale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MentionsLegales": {
+      "type": "richtext"
+    },
+    "PolitiqueConfidentialite": {
+      "type": "richtext"
+    }
+  }
+}

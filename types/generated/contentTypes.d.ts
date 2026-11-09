@@ -447,7 +447,7 @@ export interface ApiAccueilParametreAccueilParametre
   extends Struct.SingleTypeSchema {
   collectionName: 'accueil_parametres';
   info: {
-    displayName: 'AccueilParametres';
+    displayName: 'AccueilParametre';
     pluralName: 'accueil-parametres';
     singularName: 'accueil-parametre';
   };
@@ -613,7 +613,7 @@ export interface ApiDecouvrirParametreDecouvrirParametre
   extends Struct.SingleTypeSchema {
   collectionName: 'decouvrir_parametres';
   info: {
-    displayName: 'DecouvrirParametres';
+    displayName: 'DecouvrirParametre';
     pluralName: 'decouvrir-parametres';
     singularName: 'decouvrir-parametre';
   };
@@ -657,6 +657,7 @@ export interface ApiDemarcheDemarche extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Delai: Schema.Attribute.String;
     Description: Schema.Attribute.Text;
+    Lieu: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -664,7 +665,7 @@ export interface ApiDemarcheDemarche extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     Pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Pieces: Schema.Attribute.String;
+    Pieces: Schema.Attribute.Blocks;
     publishedAt: Schema.Attribute.DateTime;
     Titre: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -709,7 +710,7 @@ export interface ApiMairieParametreMairieParametre
   extends Struct.SingleTypeSchema {
   collectionName: 'mairie_parametres';
   info: {
-    displayName: 'MairieParametres';
+    displayName: 'MairieParametre';
     pluralName: 'mairie-parametres';
     singularName: 'mairie-parametre';
   };
@@ -735,6 +736,35 @@ export interface ApiMairieParametreMairieParametre
     Presentation: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
     Telephone: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageLegalePageLegale extends Struct.SingleTypeSchema {
+  collectionName: 'page_legales';
+  info: {
+    displayName: 'PageLegale';
+    pluralName: 'page-legales';
+    singularName: 'page-legale';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-legale.page-legale'
+    > &
+      Schema.Attribute.Private;
+    MentionsLegales: Schema.Attribute.RichText;
+    PolitiqueConfidentialite: Schema.Attribute.RichText;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -807,7 +837,7 @@ export interface ApiRojetsParametreRojetsParametre
   extends Struct.SingleTypeSchema {
   collectionName: 'rojets_parametres';
   info: {
-    displayName: 'ProjetsParametres';
+    displayName: 'ProjetsParametre';
     pluralName: 'rojets-parametres';
     singularName: 'rojets-parametre';
   };
@@ -1353,6 +1383,7 @@ declare module '@strapi/strapi' {
       'api::demarche.demarche': ApiDemarcheDemarche;
       'api::document-officiel.document-officiel': ApiDocumentOfficielDocumentOfficiel;
       'api::mairie-parametre.mairie-parametre': ApiMairieParametreMairieParametre;
+      'api::page-legale.page-legale': ApiPageLegalePageLegale;
       'api::parametres-generaux.parametres-generaux': ApiParametresGenerauxParametresGeneraux;
       'api::projet.projet': ApiProjetProjet;
       'api::rojets-parametre.rojets-parametre': ApiRojetsParametreRojetsParametre;

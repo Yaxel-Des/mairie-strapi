@@ -4,7 +4,7 @@
   "info": {
     "singularName": "rojets-parametre",
     "pluralName": "rojets-parametres",
-    "displayName": "ProjetsParametres"
+    "displayName": "ProjetsParametre"
   },
   "options": {
     "draftAndPublish": true

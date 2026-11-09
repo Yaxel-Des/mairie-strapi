@@ -4,7 +4,7 @@
   "info": {
     "singularName": "mairie-parametre",
     "pluralName": "mairie-parametres",
-    "displayName": "MairieParametres"
+    "displayName": "MairieParametre"
   },
   "options": {
     "draftAndPublish": true
