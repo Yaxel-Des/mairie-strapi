@@ -23,6 +23,26 @@ const deniedTypes = [
   'application/x-mach-binary',
 ];
 
+function getCloudinaryProviderOptions(cloudinaryUrl?: string) {
+  if (!cloudinaryUrl) return {};
+
+  const parsedUrl = new URL(cloudinaryUrl);
+  if (
+    parsedUrl.protocol !== 'cloudinary:' ||
+    !parsedUrl.hostname ||
+    !parsedUrl.username ||
+    !parsedUrl.password
+  ) {
+    throw new Error('CLOUDINARY_URL doit être une URL Cloudinary valide.');
+  }
+
+  return {
+    cloud_name: parsedUrl.hostname,
+    api_key: decodeURIComponent(parsedUrl.username),
+    api_secret: decodeURIComponent(parsedUrl.password),
+  };
+}
+
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({
   'users-permissions': {
     config: {
@@ -34,6 +54,13 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
   },
   upload: {
     config: {
+      provider: 'cloudinary',
+      providerOptions: getCloudinaryProviderOptions(env('CLOUDINARY_URL')),
+      actionOptions: {
+        upload: {},
+        uploadStream: {},
+        delete: {},
+      },
       security: {
         allowedTypes: allowedMediaTypes,
         deniedTypes,
