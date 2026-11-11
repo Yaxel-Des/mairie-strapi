@@ -16,6 +16,7 @@ const config: Core.Config.Middlewares = [
       },
     },
   },
+  
   {
     name: 'strapi::cors',
     config: {
