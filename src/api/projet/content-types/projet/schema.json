@@ -4,7 +4,7 @@
   "info": {
     "singularName": "projet",
     "pluralName": "projets",
-    "displayName": "Projet"
+    "displayName": "Projets"
   },
   "options": {
     "draftAndPublish": true
@@ -20,7 +20,9 @@
     "Statut": {
       "type": "enumeration",
       "enum": [
-        "Enumeration : \"En cours\", \"Terminé\", \"Prévu\""
+        "En cours",
+        "Terminé",
+        "Prévu"
       ]
     },
     "Image": {

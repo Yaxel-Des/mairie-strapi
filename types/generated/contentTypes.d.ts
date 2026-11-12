@@ -803,7 +803,7 @@ export interface ApiParametresGenerauxParametresGeneraux
 export interface ApiProjetProjet extends Struct.CollectionTypeSchema {
   collectionName: 'projets';
   info: {
-    displayName: 'Projet';
+    displayName: 'Projets';
     pluralName: 'projets';
     singularName: 'projet';
   };
@@ -824,7 +824,7 @@ export interface ApiProjetProjet extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     Statut: Schema.Attribute.Enumeration<
-      ['Enumeration : "En cours", "Termin\u00E9", "Pr\u00E9vu"']
+      ['En cours', 'Termin\u00E9', 'Pr\u00E9vu']
     >;
     Titre: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
